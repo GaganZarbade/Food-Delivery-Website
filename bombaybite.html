@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>www.zomatoclone.com</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<style type="text/css">
+		body
+		{
+			margin: 0px;
+			padding: 0px;
+			font-family: corbel;
+		}
+		#main{
+			top: 0;
+		}
+		.zomato
+		{
+			top: 0px;
+			position: absolute;
+			margin-left: 450px;
+			color: darkred;
+			font-family: corbel;
+			cursor: pointer;
+		}
+		.zomato:hover{
+			color: red;
+		}
+		#list1
+		{
+			position: absolute;
+			top: 250px;
+			font-family: corbel;
+			font-size: 20px;
+			font-weight: bold;
+			margin-left: 320px;
+		}
+		#list1 li
+		{
+			display: inline;
+			margin: 20px;
+			cursor: pointer;
+		}
+		#list1 li:hover
+		{
+			border-bottom: 2px solid white;
+			border-radius: 5px;
+		}
+		video
+		{
+			width: 100%;
+			height: 100%;
+		}
+		#bgvideo
+		{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			min-width: 100%;
+			min-height: 100%;
+			z-index: -1;
+		}
+		@media only screen and (max-width: 768px)
+		{
+			video
+			{
+				display: none;
+			}
+		}
+		#list2
+		{
+			position: absolute;
+			color:whitesmoke;
+			top: 700px;
+			left: 470px;
+		}
+		#list2 li
+		{
+			display: inline;
+			padding: 15px;
+			color: red;
+		}
+		.about
+		{
+			color: orangered;
+		}
+		h1
+		{
+			font-size: 120px;
+		}
+		#h2
+		{
+			position: absolute;
+			color: white;
+			font-size: 50px;
+			left: 390px;
+			top: 400px;
+		}
+		h3
+		{
+			font-size: 30px;
+		}
+		font
+		{
+			font-size: 20px;
+			font-weight: bolder;
+		}
+		#search
+		{
+			position: absolute;
+			top: 550px;
+			left: 400px;
+			width:30vh; 
+			height: 5vh; 
+			border: 1px solid white;
+			border-radius: 25px;
+		}
+		#button
+		{
+			position: absolute;
+			top: 552px;
+			left: 740px;
+			width: 25vh;
+			height: 5vh;
+			border: 1px solid white;
+			border-radius: 25px;
+			margin-left: 5px;
+			font-family: corbel;
+			cursor: pointer;
+		}
+		#button:hover
+		{
+			width: 25.2vh;
+			height: 5.3vh;
+			background: ;
+			font-weight: bolder;
+		}
+		#search1
+		{
+			width: 100%;
+			margin-left: 50px;
+		}
+		input
+		{
+			padding-left: 10%;
+			color: brown;
+			font-weight: bolder;
+		}
+		input::placeholder
+		{
+			color: red;
+		}
+		#img
+		{
+			position: absolute;
+			margin-top: 40px;
+			padding-left: 100px;
+			width: 1250px;
+			height: 450px;
+			background: white;
+		}
+		.cont1
+		{
+			position: absolute;
+			width: 320px;
+			height: 400px;
+			border-radius: 15px;
+			background: whitesmoke;
+		}
+		.oo
+		{
+			position: absolute;
+			border-radius: 15px;
+			font-family: corbel;
+			margin-left: 50px;
+			width: 270px;
+		}
+		.oo1
+		{
+			position: absolute;
+			border-radius: 15px;
+			font-family: corbel;
+			margin-left: 30px;
+			width: 270px;
+		}
+		.img1
+		{
+			position: absolute;
+			width: 320px;
+			height: 200px;
+			border-radius: 15px;
+		}
+		.img1:hover
+		{
+			transform: translateY(200px);
+			cursor: pointer;
+			transition: transform 300ms linear;
+		}
+		.cont2
+		{
+			position: absolute;
+			width: 320px;
+			height: 400px;
+			left: 80vh;
+			border-radius: 15px;
+			background: whitesmoke;
+		}
+
+		.img2
+		{
+			position: relative;
+			width: 320px;
+			height: 200px;
+			border-radius: 15px;
+			animation: a 5s;
+		}
+		    
+		.img2:hover
+		{
+			transform: translateY(200px);
+			cursor: pointer;
+			transition: transform 300ms linear;
+		}
+		.cont3
+		{
+			position: absolute;
+			width: 320px;
+			height: 400px;
+			left: 143vh;
+			border-radius: 15px;
+			background: whitesmoke;
+		}
+		.img3
+		{
+			position: relative;
+            width: 320px;
+			height: 200px;
+			border-radius: 15px;
+		}
+		.img3:hover
+		{
+			transform: translateY(200px);
+			transition: transform 300ms linear;
+			cursor: pointer;
+		}
+		.collection
+		{
+			position: absolute;
+			width: 90%;
+			height: 80%;
+			top: 1200px;
+			margin-top: 60px;
+			padding-left: 60px;
+		}
+		.collection1
+		{
+			margin-left: 50px;
+			height: 110px;
+		}
+		.t1
+		{
+			width: 97%;
+			height: auto;
+			font-size: 20px;
+			margin-left: 50px;
+		}
+		#bhopal1
+		{
+			position: absolute;
+			width: 90%;
+			margin-top: 30px;
+			margin-left: 20px;
+		}
+		#bhopal
+		{
+	
+			width: 80%;
+			margin: 25px;
+		}
+		.imgbpl
+		{
+			width: 270px;
+			height:300px;
+			margin-left: 20px;
+			border: 1px solid white;
+			border-radius: 15px;
+		}
+		#bb
+		{
+			position: relative;
+			top: -80px;
+			left: 40px;
+			color: white;
+			font-size: 25px;
+
+		}
+
+		.popu
+		{
+			position: relative;
+			top: 450px;
+			width: 100%;
+			height: 100%;
+			margin-left: 15px;
+		}
+		#popu
+		{
+			position: relative;
+			top: 450px;
+			width: 100%;
+			height: 100%;
+			margin-left: 15px;
+		}
+		.popu td
+		{
+			text-align: center;
+			font-size: 20px;
+		}
+		.button1
+		{
+			width: 70%;
+			height: 80%;
+			border: white;
+			border-radius: 20px;
+			margin: 20px;
+			font-size: 25px;
+			font-family: corbel;
+		}
+		#popu1
+		{
+			position: relative;
+			top: 500px;
+			width: 100%;
+			height: 100%;
+			background-color: #ffffe6;
+		}
+		#zumu
+		{
+			width: 100%;
+			height:20%;
+		}
+		#zumu1
+		{
+			width: 100%;
+			height:auto;
+			padding: 20px;
+		}
+		#zumu1 th
+		{
+			width: 20%;
+			text-align: center;
+			font-weight: bold;
+			padding: 20px;
+		}
+		#zumu1 td
+		{
+			text-align: center;
+			padding: 7px;
+		}
+		select
+		{
+			width: 100px;
+			height: 35px;
+			border: 1px solid silver;
+			border-radius: 20px;
+		}
+		a
+		{
+			color: white;
+			text-decoration: none;
+		}
+		a:hover
+		{
+			color: red;
+		}
+
+
+		.a
+		{
+			color: darkred;
+		}
+		
+		
+</style>
+</head>
+<body>
+	<div>
+	     <video id="video" playsinline autoplay muted loop>
+		       <source src="C:\Users\VSI\Desktop\html+css\Bombay Bite\video\food123.mp4" type="video/mp4">
+	     </video>
+    </div>
+	<div>
+			<div class="zomato"><h1><a href="bombaybite.html">zomato</a></h1></div>
+	</div>
+	<div id="list1">
+	<ul>
+		<li><a href="bombaybite.html">HOME</a></li>
+		<li><a href="https://www.zomato.com/who-we-are"> ABOUT US</a></li>
+		<li><a href="https://play.google.com/store/apps/details?id=com.application.zomato&hl=en_IN&gl=US"> GET IN APP</a></li>
+		<li><a href="signin.html"> LOG IN </a></li>
+		<li><a href="signup.html"> SIGN UP</a></li>
+	</ul>
+    </div>
+	<div>
+		<h2 id="h2">Get Best food and drink</h2>
+		<div id="search1"><input id="search" type="text" name="search" placeholder="Enter Address"><button id="button" style="font-weight: bolder;"><a class="a" href="https://www.google.com/maps/place/Bhopal,+Madhya+Pradesh/@23.1996633,77.2658035,11z/data=!3m1!4b1!4m5!3m4!1s0x397c428f8fd68fbd:0x2155716d572d4f8!8m2!3d23.2599333!4d77.412615"> Search Nearby</a></button></div>
+	
+    </div>
+	<div id="list2">
+		<ul>
+			<li><a href="https://www.facebook.com/login/"> <i class="fa fa-facebook-official fa-2x"></i></a></li>
+			<li><a href="https://www.instagram.com/"> <i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.youtube.com/channel/UCD7kbZQyYIR6RgJQYW9w0Tg"> <i class="fa-brands fa-youtube fa-2x"></i></a></li>
+			<li><a href="https://twitter.com/i/flow/login"> <i class="fa-brands fa-twitter fa-2x "></i></a></li>
+		</ul>
+	</div>
+	<div id="img">
+		<a class="a" href="C:\Users\VSI\Desktop\html+css\Bombay Bite\delivery.html"><div class="cont1"> <div class="oo"><h3>&nbsp&nbsp&nbsp&nbspOrder online</h3><font>Stay home and order food at home</font></div><img class="img1" src="C:\Users\VSI\Desktop\html+css\Bombay Bite\img\food1.jpg"></div></a>
+		<a class="a" href="C:\Users\VSI\Desktop\html+css\Bombay Bite\dining.html"><div class="cont2"><div class="oo"><h3>&nbsp&nbsp&nbsp&nbspDining</h3><font>View city's famous dining venues</font></div><img class="img2" src="C:\Users\VSI\Desktop\html+css\Bombay Bite\img\image12.jpg"></div></a>
+		<div class="cont3"><div class="oo1"><h3>&nbsp&nbsp&nbsp&nbspNightlife and clubs</h3><font>Explore city's nightlife outlets</font></div><img class="img3" src="C:\Users\VSI\Desktop\html+css\Bombay Bite\img\image13.jpg"></div>
+	</div>
+	<div class="collection">
+		<div class="collection1"><h2 style="font-size: 50px;">Collections</h2></div>
+		<div><table  class="t1">
+								<tr>
+									<td>Explore curated lists of top restaurants, cafes, pubs, and bars in Bhopal, based on trends
+                                                                                                                                   </td>
+                                    <td><a class="a" href="C:\Users\VSI\Desktop\html+css\Bombay Bite\bhopalbest.html">All collection in bhopal</a></td>                                                                                               
+								</tr>
+		                </table>
+	</div>
+		 <section class="bhopal">
+		 		<table id="bhopal1" >
+		            <tr>
+		            	<td>
+		            		<a href="C:\Users\VSI\Desktop\html+css\Bombay Bite\bhopalbest.html"> <img class="imgbpl" src="C:\Users\VSI\Desktop\html+css\Bombay Bite\img\bhopal.jpg"><h4 id="bb">Best of Bhopal</h4></a>
+		            	</td>
+		            	<td>
+		 			    <a href="C:\Users\VSI\Desktop\html+css\Bombay Bite\trending.html"><img class="imgbpl" src="C:\Users\VSI\Desktop\html+css\Bombay Bite\img\food1.jpg"><h4 id="bb">Trending this week</h4></a>
+		 			    </td>
+		 			    <td>
+		 			    <a href="C:\Users\VSI\Desktop\html+css\Bombay Bite\bhopalbest.html"><img class="imgbpl" src="C:\Users\VSI\Desktop\html+css\Bombay Bite\img\bhopal1.jpg"><h4 id="bb">Must visit Restaurent</h4></a>
+		 			    </td>
+		 			    <td>
+		 			    <img class="imgbpl" src="C:\Users\VSI\Desktop\html+css\Bombay Bite\img\bhopal3.jpg"><h4 id="bb">Rooftops</h4>
+		 			    </td>
+		 			</tr>
+		 		</table>
+	    </section>
+	    <section>
+	    	<div id="popu"><h2 style="font-size:50px">Popular localities in and around <b>Bhopal</b></h2></div>
+	    	<table class="popu">
+	    		<tr>
+	    			<td style="width:35%"><button class="button1"><h4>Maharana Pratap Nagar</h4></button></td>
+	    			<td><button class="button1"><h4>TT Nagar</h4></button></td>
+	    			<td><button class="button1"><h4>Arera Colony</h4></button></td>
+	    		</tr>
+	    		<tr>
+	    			<td><button class="button1"><h4>Gulmohar Colony</h4></button></td>
+	    			<td><button class="button1"><h4>Kohefiza</h4></button></td>
+	    			<td><button class="button1"><h4>Peer Gate Area</h4></button></td>
+	    		</tr>
+	    		<tr>
+	    			<td><button class="button1"><h4>Habibganj</h4></button></td>
+	    			<td><button class="button1"><h4>Bhel</h4></button></td>
+	    			<td><button class="button1"><h4>Airport Area</h4></button></td>
+	    		</tr>
+	    		<tr>
+	    			<td><button class="button1"><h4>JP Nagar</h4></button></td>
+	    			<td><button class="button1"><h4>Jahangirabad</h4></button></td>
+	    		</tr>
+	    	</table>
+	    </section>
+		<section id="popu1">
+			<table id="zumu">
+				<tr style="width:60%">
+					<td>
+			             <h3 style="margin-left: 20px; font-size: 50px;font-weight: bolder;">zomato</h3>
+			        </td>
+			        <td style="width:10%">
+				         <select>
+					        <option>India</option>
+					        <option>Chile</option>
+							<option>Italy</option>
+							<option>Singapore</option>
+							<option>UAE</option>
+							<option>Austrelia</option>
+							<option>Brazil</option>
+							<option>South Africa</option>
+							<option>America</option>
+							<option>United Kingdom</option>
+							<option>New Zealand</option>
+							<option>Canada</option>
+							<option>Ireland</option>
+						</select>
+				   </td>
+				   <td style="width:10%">
+				   	<select>
+					        <option>English</option>
+					        <option>Portugues</option>
+							<option>Cestina</option>
+							<option>Polis</option>
+							<option>Italian</option>
+							<option>Slovensina</option>
+				   </td>
+			   </tr>
+		   </table>
+		   <table id="zumu1">
+		   	<tr>
+		   		<th>About Zomato</th>
+		   		<th>Zomaverse</th>
+		   		<th>For Restaurents</th>
+		   		<th>Learn more</th>
+		   		<th>For Enterprises</th>
+		   	</tr>
+		   	<tr>
+		   		<td>Who are we</td>
+		   		<td>Zomato</td>
+		   		<td>Partner with us</td>
+		   		<td>Privacy</td>
+		   		<td>Zomato for work</td>
+		   	</tr>
+		   	<tr>
+		   		<td>Blog</td>
+		   		<td>Feeding India</td>
+		   		<td>Apps for you</td>
+		   		<td>Security</td>
+		   	</tr>
+		   	<tr>
+		   		<td>Work with Us</td>
+		   		<td>Hyperpure</td>
+		   		<td></td>
+		   		<td>Terms</td>
+		   	</tr>
+		   	<tr>
+		   		<td>Investor Relation</td>
+		   		<td>Zomaland</td>
+		   		<td></td>
+		   		<td>Sitemap</td>
+		   	</tr>
+		   	<tr>
+		   		<td>Report Fraud</td>
+		   	</tr>
+		   	<tr>
+		   		<td>Contact Us</td>
+		   	</tr>
+		   </table>
+			
+		</section>
+	
+	
+</body>
+</html>
